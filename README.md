@@ -14,7 +14,7 @@ Pipeline complet : **IP Suspecte → Domaines & Emails → Attribution du groupe
 ## 📁 Structure des fichiers
 
 ```
-osint_mapper/
+Infrastructure Mapping/
 ├── index.php          ← Page principale (investigation complète)
 ├── dashboard.php      ← Tableau de bord & statistiques
 ├── compare.php        ← Comparaison de 2 IPs côte à côte
@@ -39,12 +39,12 @@ osint_mapper/
 cp -r osint_mapper/ C:/xampp/htdocs/
 
 # Ouvrir dans le navigateur
-http://localhost/osint_mapper/
+http://localhost/InfrastructureMapping/
 ```
 
 ### Lancement avec PHP built-in server
 ```bash
-cd osint_mapper/
+cd Infrastructure Mappingapper/
 php -S localhost:8080
 # Ouvrir http://localhost:8080
 ```
