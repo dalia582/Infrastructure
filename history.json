@@ -1,0 +1,18 @@
+[
+    {
+        "ip": "9.9.9.9",
+        "country": "United States",
+        "threat_score": 28,
+        "threat_level": "MEDIUM",
+        "first_seen": "2026-05-03 12:45:54",
+        "last_seen": "2026-05-03 18:10:50"
+    },
+    {
+        "ip": "151.101.1.69",
+        "country": "Canada",
+        "threat_score": 73,
+        "threat_level": "CRITICAL",
+        "first_seen": "2026-05-03 12:32:24",
+        "last_seen": "2026-05-03 19:16:33"
+    }
+]

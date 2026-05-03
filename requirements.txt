@@ -1,0 +1,49 @@
+# ============================================================
+# OSINT Infrastructure Mapper v7 — Requirements
+# TP: Investigation OSINT & Infrastructure Mapping
+# ============================================================
+
+# ── Environnement Serveur ────────────────────────────────────
+PHP >= 7.4
+Apache >= 2.4  (ou Nginx / XAMPP / WAMP / Laragon)
+
+# ── Extensions PHP requises ──────────────────────────────────
+php-json        # Lecture/écriture JSON (historique, stats)
+php-filter      # Validation des adresses IP
+php-sockets     # Scan de ports via fsockopen()
+php-curl        # Appels aux APIs externes (optionnel)
+allow_url_fopen = On   # Requis pour ip-api.com (php.ini)
+
+# ── Bibliothèques JavaScript (CDN — aucune installation) ─────
+Chart.js          >= 4.0    # Graphiques Dashboard (camembert, donut)
+Leaflet.js        >= 1.9    # Carte interactive OpenStreetMap
+html2pdf.js       >= 0.10   # Export PDF côté client
+Font Awesome      >= 6.4    # Icônes
+Google Fonts      (Syne + JetBrains Mono)
+
+# ── APIs Externes (optionnelles — mode démo sans clé) ────────
+ip-api.com        # Géolocalisation IP          [GRATUIT / sans clé]
+VirusTotal API v3 # Réputation & détections     [clé gratuite]
+AbuseIPDB API v2  # Score d'abus & rapports     [clé gratuite]
+Shodan API        # Services, bannières, CVEs   [clé gratuite limitée]
+Hunter.io API     # Découverte d'emails         [clé gratuite]
+
+# ── Outils OSINT de Référence (mentionnés dans le TP) ────────
+Maltego           # Visualisation graphe (simulé via Canvas HTML5)
+Shodan            # Scan infrastructure (simulé en mode démo)
+VirusTotal        # Analyse réputation (simulé en mode démo)
+SpiderFoot        # Framework OSINT (méthodologie adoptée)
+
+# ── Installation ─────────────────────────────────────────────
+# 1. Copier le dossier osint_mapper/ dans htdocs/ (XAMPP)
+# 2. Démarrer Apache depuis XAMPP Control Panel
+# 3. Ouvrir http://localhost/osint_mapper/
+# (Aucune installation de dépendances requise — tout via CDN)
+
+# ── Configuration des clés API (optionnel) ───────────────────
+# Ouvrir api_external.php et renseigner :
+#   VT_API_KEY     = "votre_clé_virustotal"
+#   ABUSEIPDB_KEY  = "votre_clé_abuseipdb"
+#   SHODAN_KEY     = "votre_clé_shodan"
+#   HUNTER_KEY     = "votre_clé_hunter"
+# Sans clés → mode démo automatique (données simulées réalistes)
